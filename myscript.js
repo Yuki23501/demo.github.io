@@ -1,4 +1,12 @@
- $(function(){
+function play_se(){
+        // SEとバイブレーションの制御
+        var voice = new Audio('voice.mp3');
+        var warning = new Audio('warning.mp3');
+        warning.play();
+        voice.play();
+        navigator.vibrate([200, 100, 200, 100, 200, 100, 200]);
+      } 
+$(function(){
         // ブラウザバック禁止
         history.pushState(null, null, null);
         $(window).on("popstate", function(e){
